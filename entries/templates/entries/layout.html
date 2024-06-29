@@ -17,6 +17,14 @@
       {% endfor %}
     </ul>
     {% endif %} 
+
     {% block content %}{% endblock %}
+
+    
+    <hr />
+    <form action="{% url 'admin:logout' %}" method="post">
+        {% csrf_token %}
+        <button type="submit">Logout</button>
+    </form>
   </body>
 </html>
