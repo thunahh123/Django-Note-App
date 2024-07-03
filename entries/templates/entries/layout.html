@@ -3,28 +3,37 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>My Dream Diary</title>
+    <title>My Dream Journal</title>
     <link rel="stylesheet" href="{% static 'css/diary.css' %}" />
   </head>
 
   <body>
-    <h1><a href="/">Tell me your dream …</a></h1>
+    <header class="header">
+      <h1><a href="/">Tell me your dream …</a></h1>
+      <nav class="menu">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="#home">User</a></li>
+        </ul>
+      </nav>
+    </header>
 
-    {% if messages %}
-    <ul class="messages">
-      {% for message in messages %}
-      <li class="message">{{ message }}</li>
-      {% endfor %}
-    </ul>
-    {% endif %} 
+    <main>
+      {% if messages %}
+      <ul class="messages">
+        {% for message in messages %}
+        <li class="message">{{ message }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %} {% block content %}{% endblock %}
 
-    {% block content %}{% endblock %}
-
-    
-    <hr />
-    <form action="{% url 'admin:logout' %}" method="post">
+      <hr />
+      <form action="{% url 'admin:logout' %}" method="post">
         {% csrf_token %}
-        <button type="submit">Logout</button>
-    </form>
+        <button class="btn" type="submit">Logout</button>
+      </form>
+    </main>
+
+    <footer>Copyright &#169; Developed by Emily Nguyen in 2024</footer>
   </body>
 </html>

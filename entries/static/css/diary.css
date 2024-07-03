@@ -1,113 +1,182 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: sans-serif;
-    font-size: 18px;
+  font-family: sans-serif;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main{
+    flex: 1;
 }
 
 a {
-    color: inherit;
+  color: inherit;
 }
 a:hover {
-    opacity: 0.7;
+  opacity: 0.7;
 }
 
 h1 {
-    font-size: 2.8em;
+  font-size: 2.8em;
 }
 
 h1 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
-h2, h3 {
-    font-size: 1.4em;
-    margin: 0;
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    vertical-align: top;
+h2,
+h3 {
+  font-size: 1.4em;
+  margin: 0;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  vertical-align: top;
 }
 
 h2 {
-    background-color: aquamarine;
+  background-color: aquamarine;
 }
 
 .mark {
-    background-color: gainsboro;
+  background-color: gainsboro;
 }
 .mark a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 article {
-    margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 p {
-    font-size: 1.2em;
-    padding-left: 1rem;
-    line-height: 1.3em;
-    max-width: 36rem;
-    color: dimgray;
+  font-size: 1.2em;
+  padding-left: 1rem;
+  line-height: 1.3em;
+  max-width: 36rem;
+  color: dimgray;
 }
 
 em {
-    font-style: normal;
-    font-weight: bold;
+  font-style: normal;
+  font-weight: bold;
 }
 
 /* Form */
 
 label {
-    display: block;
+  display: block;
 }
 
 button,
 textarea,
 input {
-    font-size: inherit;
-    min-height: 2.5em;
-    padding: 0 1rem;
+  font-size: inherit;
+  min-height: 2.5em;
+  padding: 0 1rem;
 }
 
 input[type="text"],
 textarea {
-    width: 100%;
+  width: 100%;
 }
 
 textarea {
-    padding: 0.5rem 1rem;
-    font-family: sans-serif;
+  padding: 0.5rem 1rem;
+  font-family: sans-serif;
 }
 
 button,
 input[type="submit"] {
-    margin: 0 1rem 2px 1rem;
+  /* margin: 0 1rem 2px 1rem;
     cursor: pointer;
     font-weight: bold;
-    min-width: 8rem;
+    min-width: 8rem; */
+
+  background-color: #3657eb;
+  border: none;
+  border-radius: 2rem;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+
+  margin-top: 1rem;
+}
+
+.header {
+  display: flex;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.menu li {
+  float: right;
+  display: inline;
+}
+
+li a {
+  display: block;
+  padding: 8px;
+  background-color: #dddddd;
+}
+/* buttons */
+.btn {
+  background-color: #3657eb;
+  border: none;
+  border-radius: 2rem;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+
+  margin-top: 1rem;
+}
+
+.btn:hover {
+  background-color: #d43a26;
+  color: white;
 }
 
 /* Day coloring */
 
 .Saturday,
 .Sunday {
-    background-color: lightsalmon;
+  background-color: lightsalmon;
 }
 
 /* Messages */
 
 .messages {
-    padding: 0;
-    list-style: none;
+  padding: 0;
+  list-style: none;
 }
 
 .message {
-    width: 100%;
-    background: lightblue;
-    padding: 1rem;
-    text-align: center;
-    margin: 1rem 0;
+  width: 100%;
+  background: lightblue;
+  padding: 1rem;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+/* footer */
+footer {
+  height: 10vh;
+  width: 100%;
+  text-align: center;
+  background-color: #f1f1f1; /* Example background color */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

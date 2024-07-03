@@ -4,7 +4,7 @@
 
 <article>
     <h2 class="mark">{% now "Y-m-d H:i" %}</em></h2>
-    <a href="{% url 'entry-create' %}"><button>Add new dream</button></a>
+    <a href="{% url 'entry-create' %}"><button class="btn">Add new dream</button></a>
 </article>
 
 {% for entry in entry_list %}

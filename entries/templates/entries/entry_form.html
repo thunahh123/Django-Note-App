@@ -3,15 +3,15 @@
     <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
-        <input type="submit" value="Save">
+        <input class="btn" type="submit" value="Save">
     </form>
     {% if entry %}
         <a href="{% url 'entry-detail' entry.id %}">
-            <button>Cancel</button>
+            <button class="btn">Cancel</button>
         </a>
     {% else %}
         <a href="{% url 'entry-list' %}">
-            <button>Cancel</button>
+            <button class="btn">Cancel</button>
         </a>
     {% endif %}
 {% endblock %}
